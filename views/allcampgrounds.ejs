@@ -1,0 +1,28 @@
+<% layout('layout/boilerplate')%>
+    <h1>Campgrounds</h1>  
+    <form action="http://localhost:3000/campgrounds/new">
+        <button type="submit">New Campground</button>
+    </form>  
+    <ul>
+        <% for(let city of campgrounds) {%>
+            <div class="card mb-3" >
+                <div class="row ">
+                    <div class="col-md-4 ">
+                        <img src="<%=city.image%>" alt="<<<not availiaabl??????>" class="img-fluid">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title"><%=city.title %></h5>
+                            <p class="card-text"><%= city.description %></p>
+                            <p class="card-text">
+                                <small class="text-muted"><%= city.location %></small>
+                            </p>
+                            <a class="btn btn-primary" 
+                            href="/campgrounds/<%= city._id %>">View campgorund</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <% } %>
+    </ul>
