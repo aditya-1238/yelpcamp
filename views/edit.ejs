@@ -7,19 +7,28 @@
     <div class="col-6 offset-3">
         <body>
             <h1>Edit campground: <%= camp.title %></h1>
-            <form action="/campgrounds" method="post" >
+            <form action="/campgrounds/<%= camp._id %>?_met=PUT" method="post" novalidate class='validated-form' >
                 <div class='mb-3'>
                     <label class="form-label" for="title">Campground name:</label>
-                    <input type="text" class="form-control" name="campground[title]" id="title" value="<%= camp.title %>">
+                    <input type="text" class="form-control" name="campground[title]" id="title" value="<%= camp.title %>" required  >
+                    <div class="valid-feedback">
+                        Looks good!
+                      </div>
                 </div>
         
                 <div class='mb-3'>
                     <label for="location" class="form-label">  Campground location:</label>
-                    <input type="text" class="form-control" name="campground[location]" id="location" value="<%= camp.location %>">
+                    <input type="text" class="form-control" name="campground[location]" id="location" value="<%= camp.location %>"  required  >
+                    <div class="valid-feedback">
+                        Looks good!
+                      </div>
                 </div>
                 <div class='mb-3'>
                     <label for="image" class="form-label">  Image url:</label>
-                    <input type="text" class="form-control" name="campground[image]" id="image" value="<%= camp.image %>">
+                    <input type="text" class="form-control" name="campground[image]" id="image" value="<%= camp.image %>" required >
+                    <div class="valid-feedback">
+                        Looks good!
+                      </div>
                 </div>
 
                 <div class='mb-3'>
@@ -27,18 +36,24 @@
                     <div class="input-group">
                         <span class="input-group-text">Rs/night</span>
 
-                        <input type="number" class="form-control" name="campground[price]" id="price" value="<%= camp.price %>" min="1000">
+                        <input type="text" class="form-control" name="campground[price]" id="price" value="<%= camp.price %>" min="1000" required >
+                        <div class="valid-feedback">
+                            Looks good!
+                          </div>
                     </div>
                 </div>
 
                 <div class='mb-3'>
                     <label for="description" class="form-label">  Campground description:</label>
-                    <textarea type="text-area" class="form-control" name="campground[description]" id="description" ><%= camp.description %> </textarea>
+                    <textarea type="text-area" class="form-control" name="campground[description]" id="description" required  ><%= camp.description %> </textarea>
+                    <div class="valid-feedback">
+                        Looks good!
+                      </div>
                 </div>
 
                 <div class="mb-3">
 
-                    <button class="btn btn-success" type="submit">Add campground</button>
+                    <button class="btn btn-success" type="submit">Save changes</button>
                 </div>
                 
             </form>
