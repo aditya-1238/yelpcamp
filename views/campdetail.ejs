@@ -2,10 +2,36 @@
 
 <link rel="stylesheet" href="/css/star.css">
 
+
+
 <div class="row">
     <div class="col-6 ">
-        <div class="card mb-3">
-            <img src="<%= camp.image%>" class="card-img-top" alt="...">
+        
+        <div id="campgroundCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <% camp.images.forEach((img,i) =>{%>
+              <div class="carousel-item <%= i === 0  ? 'active':'' %> ">
+                <img src="<%=img.url%>" class="d-block w-100" alt=""> 
+                <!-- use img.thumbnail w_1000/ar_4:3,c_crop for better carousel -->
+              </div>
+              
+              <% }) %>
+              
+            </div>
+            <% if(camp.images.length >1){ %>
+            <button class="carousel-control-prev" type="button" data-bs-target="#campgroundCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#campgroundCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+            <% } %>
+          </div>
+        
+        <div class="card mb-3">        
+             
             <div class="card-body">
                 <h5 class="card-title"><%= camp.title%></h5>
                 <p class="card-text"><%= camp.description%></p>
@@ -31,6 +57,8 @@
     </div>
 
     <div class="col-6">
+        <div id='map' style='width: 100%; height: 300px;' class=""></div>
+        <h6 class="mb-3">(Note: Please contact owner for exact location)</h6>
         <% if(currentUser){ %>
         <h2>Leave a Review</h2>
         <form action="/campgrounds/<%= camp._id%>/reviews" method="post" class="mb-3 validated-form" novalidate>
@@ -85,3 +113,10 @@
         <% } %>
     </div>
 </div>
+
+<script>
+    const mapToken='<%-process.env.MAPBOX_TOKEN%>';
+    const campground = <%-JSON.stringify(camp)%>;
+ </script>
+
+<script src="/js/showMap.js"></script>

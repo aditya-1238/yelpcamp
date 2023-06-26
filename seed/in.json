@@ -769,17 +769,7 @@
     "population": "201026", 
     "population_proper": "201026"
   }, 
-  {
-    "city": "Shrīrāmpur", 
-    "lat": "22.7500", 
-    "lng": "88.3400", 
-    "country": "India", 
-    "iso2": "IN", 
-    "admin_name": "West Bengal", 
-    "capital": "", 
-    "population": "181842", 
-    "population_proper": "181842"
-  }, 
+  
   {
     "city": "Hugli", 
     "lat": "22.9089", 
@@ -824,17 +814,7 @@
     "population": "153062", 
     "population_proper": "153062"
   }, 
-  {
-    "city": "Bārākpur", 
-    "lat": "22.7642", 
-    "lng": "88.3776", 
-    "country": "India", 
-    "iso2": "IN", 
-    "admin_name": "West Bengal", 
-    "capital": "", 
-    "population": "152783", 
-    "population_proper": "152783"
-  }, 
+  
   {
     "city": "Bhālswa Jahangirpur", 
     "lat": "28.7354", 
@@ -868,39 +848,8 @@
     "population": "119891", 
     "population_proper": "119891"
   }, 
-  {
-    "city": "Titāgarh", 
-    "lat": "22.7400", 
-    "lng": "88.3700", 
-    "country": "India", 
-    "iso2": "IN", 
-    "admin_name": "West Bengal", 
-    "capital": "", 
-    "population": "116541", 
-    "population_proper": "116541"
-  }, 
-  {
-    "city": "Dam Dam", 
-    "lat": "22.6200", 
-    "lng": "88.4200", 
-    "country": "India", 
-    "iso2": "IN", 
-    "admin_name": "West Bengal", 
-    "capital": "", 
-    "population": "114786", 
-    "population_proper": "114786"
-  }, 
-  {
-    "city": "Bānsbāria", 
-    "lat": "22.9700", 
-    "lng": "88.4000", 
-    "country": "India", 
-    "iso2": "IN", 
-    "admin_name": "West Bengal", 
-    "capital": "", 
-    "population": "103920", 
-    "population_proper": "103920"
-  }, 
+  
+   
   {
     "city": "Madhavaram", 
     "lat": "13.1482", 
@@ -912,17 +861,7 @@
     "population": "100442", 
     "population_proper": "100442"
   }, 
-  {
-    "city": "Baj Baj", 
-    "lat": "22.4828", 
-    "lng": "88.1818", 
-    "country": "India", 
-    "iso2": "IN", 
-    "admin_name": "West Bengal", 
-    "capital": "", 
-    "population": "76837", 
-    "population_proper": "76837"
-  }, 
+  
   {
     "city": "Nerkunram", 
     "lat": "13.0667", 
@@ -1077,17 +1016,7 @@
     "population": "11572", 
     "population_proper": "11572"
   }, 
-  {
-    "city": "Nagtala", 
-    "lat": "22.3693", 
-    "lng": "88.6071", 
-    "country": "India", 
-    "iso2": "IN", 
-    "admin_name": "West Bengal", 
-    "capital": "", 
-    "population": "10419", 
-    "population_proper": "10419"
-  }, 
+
   {
     "city": "Bāgalūr", 
     "lat": "13.1328", 
@@ -1220,17 +1149,7 @@
     "population": "6683", 
     "population_proper": "6683"
   }, 
-  {
-    "city": "Zeyādah Kot", 
-    "lat": "22.3210", 
-    "lng": "88.2457", 
-    "country": "India", 
-    "iso2": "IN", 
-    "admin_name": "West Bengal", 
-    "capital": "", 
-    "population": "6457", 
-    "population_proper": "6457"
-  }, 
+  
   {
     "city": "Arshakunti", 
     "lat": "13.0785", 
@@ -1330,17 +1249,7 @@
     "population": "4386", 
     "population_proper": "4386"
   }, 
-  {
-    "city": "Taliganja", 
-    "lat": "22.5876", 
-    "lng": "88.4439", 
-    "country": "India", 
-    "iso2": "IN", 
-    "admin_name": "West Bengal", 
-    "capital": "", 
-    "population": "4278", 
-    "population_proper": "4278"
-  }, 
+  
   {
     "city": "Tarchha", 
     "lat": "25.1116", 
@@ -1385,17 +1294,7 @@
     "population": "3996", 
     "population_proper": "3996"
   }, 
-  {
-    "city": "Kedihāti", 
-    "lat": "22.6543", 
-    "lng": "88.5304", 
-    "country": "India", 
-    "iso2": "IN", 
-    "admin_name": "West Bengal", 
-    "capital": "", 
-    "population": "3910", 
-    "population_proper": "3910"
-  }, 
+   
   {
     "city": "Doddajīvanhalli", 
     "lat": "13.0086", 
@@ -1440,17 +1339,7 @@
     "population": "3449", 
     "population_proper": "3449"
   }, 
-  {
-    "city": "Tribeni", 
-    "lat": "23.0269", 
-    "lng": "88.4565", 
-    "country": "India", 
-    "iso2": "IN", 
-    "admin_name": "West Bengal", 
-    "capital": "", 
-    "population": "3305", 
-    "population_proper": "3305"
-  }, 
+  
   {
     "city": "Huttanhalli", 
     "lat": "13.1651", 

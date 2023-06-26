@@ -1,3 +1,9 @@
+if( process.env.NODE_ENV !== "production"){
+    require('dotenv').config()
+}
+
+// console.log()
+
 const express =require('express');
 const mongoose = require('mongoose');
 const Joi = require('joi');
