@@ -24,8 +24,8 @@ const randomDataFromArray = array =>    array[Math.floor(Math.random()*array.len
 const seedDB = async ()  => {
     await Campground.deleteMany({});
     for(let i = 0; i<40; i++){
-        const randlol = Math.floor(Math.random()*140);
-        const randprice = Math.floor(Math.random()*100)*100+6000;
+        const randlol = Math.floor(Math.random()*139);
+        const randprice = Math.floor(Math.random()*100)*100+2000;
         const location = `${citydata[randlol].city}, ${citydata[randlol].admin_name}`;
         const c = new Campground({
             location: location,

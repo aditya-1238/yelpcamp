@@ -11,7 +11,7 @@
             <div class="carousel-inner">
                 <% camp.images.forEach((img,i) =>{%>
               <div class="carousel-item <%= i === 0  ? 'active':'' %> ">
-                <img src="<%=img.url%>" class="d-block w-100" alt=""> 
+                <img crossorigin="anonymous" src="<%=img.url%>" class="d-block w-100" alt=""> 
                 <!-- use img.thumbnail w_1000/ar_4:3,c_crop for better carousel -->
               </div>
               
@@ -57,7 +57,7 @@
     </div>
 
     <div class="col-6">
-        <div id='map' style='width: 100%; height: 300px;' class=""></div>
+        <div id='map'  class=""></div>
         <h6 class="mb-3">(Note: Please contact owner for exact location)</h6>
         <% if(currentUser){ %>
         <h2>Leave a Review</h2>
@@ -103,7 +103,7 @@
                     <h5 class="card-title"><%=rev.author.username%> </h5>
                     <h6 class="starability-result" data-rating="<%= rev.rating %>">
                     </h6>
-                    <p class="card-text">Review: <%= rev.body  %></p>
+                    <p class="card-text"><%= rev.body  %></p>
                     <% if( currentUser && rev.author.equals(currentUser._id)) {%>
                     <form action="/campgrounds/<%= camp._id%>/reviews/<%=rev._id%>?_met=DELETE" method="post">
                     <button class="btn btn-sm btn-danger">Delete</button></form>

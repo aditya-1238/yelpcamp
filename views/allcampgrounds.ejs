@@ -1,7 +1,7 @@
 <% layout('layout/boilerplate')%>
 
 
-<div id="map" style="width:100%; height: 500px"></div>
+<div id="cluster-map" ></div>
     <h1>Campgrounds</h1>  
 
     <form action="http://localhost:3000/campgrounds/new">
@@ -13,9 +13,9 @@
                 <div class="row ">
                     <div class="col-md-4 ">
                         <%  if(city.images.length){  %>
-                        <img src="<%=city.images[0].url%>" alt="<not displaying!!>" class="img-fluid">
+                        <img crossorigin="anonymous" src="<%=city.images[0].url%>" alt="<not displaying!!>" class="img-fluid">
                             <% }else{ %>
-                        ] <img src="https://res.cloudinary.com/dfcnf45hr/image/upload/v1687683857/YelpCamp/ltdmamvm3jcb8oz2i4wf.jpg" alt="<not displaying!!>" class="img-fluid"> 
+                        ] <img crossorigin="anonymous" src="https://res.cloudinary.com/dfcnf45hr/image/upload/v1687683857/YelpCamp/ltdmamvm3jcb8oz2i4wf.jpg" alt="<not displaying!!>" class="img-fluid"> 
                             <% } %>    
                     </div>
                     <div class="col-md-8">
