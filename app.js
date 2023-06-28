@@ -99,6 +99,7 @@ const styleSrcUrls = [
     "https://api.mapbox.com/",
     "https://api.tiles.mapbox.com/",
     "https://fonts.googleapis.com/",
+    "https://stackpath.bootstrapcdn.com/",
     "https://use.fontawesome.com/",
 ];
 const connectSrcUrls = [

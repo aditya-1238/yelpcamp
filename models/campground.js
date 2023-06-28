@@ -11,7 +11,7 @@ const imgSchema = new Schema({
 })
 
 imgSchema.virtual('thumbnail').get(function(){
-    return this.url.replace('/upload/','/upload/w_200/');
+    return this.url.replace('/upload/','/upload/w_1500/ar_4:3,c_crop/');
 })
 
 const CampgroundSchema = new Schema({
