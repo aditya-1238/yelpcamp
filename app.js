@@ -27,23 +27,42 @@ const User = require('./models/user')
 const mongoSanitize = require('express-mongo-sanitize')
 const helmet = require('helmet');
 
-const db = mongoose.connection;
-
-
-mongoose.connect('mongodb://127.0.0.1:27017/yelpCamp')
-.then(()=>{
-    console.log('connection open')
-})
-.catch((err)=>{
-    console.log('error')
-    console.log(err)
-})
+const MongoDBStore = require('connect-mongo')(session);
 
 
 
+const dbUrl = process.env.DB_URL || 'mongodb://127.0.0.1:27017/yelpCamp';
 
 
-
+mongoose.connect(dbUrl, {
+    useNewUrlParser: true,
+    
+    useUnifiedTopology: true,
+    
+}).then(()=>{
+    console.log("mongodb is connected");
+}).catch((error)=>{
+    console.log("mondb not connected");
+    console.log(error);
+});
+// .then(()=>{
+    //     console.log('connection open')
+    // })
+    // .catch((err)=>{
+        //     console.log('error')
+        //     console.log(err)
+        // })
+        
+        const db = mongoose.connection;
+        db.on("error", console.error.bind(console, "connection error:"));
+        db.once("open", () => {
+            console.log("Database connected");
+        });
+        
+        
+        
+        
+        
 const app = express();
 
 
@@ -60,9 +79,20 @@ app.use(mongoSanitize())
 
 app.engine('ejs',ejsMate);
 
+const store = new MongoDBStore({
+    url: dbUrl,
+    secret: 'bettersecretcanbeused!',
+    touchAfter: 24*60*60
+})
+
+store.on('error', function(e){
+    Console.log("SESSION STORE ERROR!",e);
+})
+
 const sessionConfig = {
+    store,
     name:'session',
-    secret: 'bettersecretcanbeused',
+    secret: 'bettersecretcanbeused!',
     resave: false,
     saveUninitialized: true,
     cookie:{

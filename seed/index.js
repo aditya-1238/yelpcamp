@@ -1,14 +1,14 @@
 
 const mongoose = require('mongoose');
+
 const Campground = require('../models/campground');
 const citydata = require('./in.json');
 const {descriptors,places} = require('./seedHelper.js');
 
 
-const db = mongoose.connection;
 
-
-mongoose.connect('mongodb://127.0.0.1:27017/yelpCamp')
+const dbUrl = process.env.DB_URL;
+mongoose.connect(dbUrl)
 .then(()=>{
     console.log('connection open')
 })
@@ -16,6 +16,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/yelpCamp')
     console.log('error')
     console.log(err)
 })
+const db = mongoose.connection;
 
 const randomDataFromArray = array =>    array[Math.floor(Math.random()*array.length)]
 
@@ -30,7 +31,7 @@ const seedDB = async ()  => {
         const c = new Campground({
             location: location,
         title: `${randomDataFromArray(descriptors)} ${randomDataFromArray(places)}`, 
-        author: '64943f7e8ec9dcf688567c7d',
+        author: '64aa6a30e13ccf61cee5d45b',
         images: [
             {
                 url:'https://res.cloudinary.com/dfcnf45hr/image/upload/v1687683857/YelpCamp/ltdmamvm3jcb8oz2i4wf.jpg',
